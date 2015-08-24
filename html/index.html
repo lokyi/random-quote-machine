@@ -1,0 +1,38 @@
+<html>
+
+<head>
+   <title>Random Quotes on Design</title>
+</head>
+
+<body>
+   <h1 class="title center">Random Quotes on Design</h1>
+   <div id="quote"></div>
+   <div id="whom"></div>
+   <div class="buttonArea center">
+      <button id="nextBtn" type="button" class="pure-button">Next Quote</button>
+   </div>
+   <div id="tweetContainer" class="center"></div>
+   <script>
+      window.twttr = (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+         if (d.getElementById(id)) return t;
+         js = d.createElement(s);
+         js.id = id;
+         js.src = "https://platform.twitter.com/widgets.js";
+         fjs.parentNode.insertBefore(js, fjs);
+
+         t._e = [];
+         t.ready = function(f) {
+            t._e.push(f);
+         };
+
+         return t;
+      }(document, "script", "twitter-wjs"));
+   </script>
+   <footer class="center">
+      <p>Source: <a href="http://quotesondesign.com/">http://quotesondesign.com/</a></p>
+   </footer>
+</body>
+
+</html>
